@@ -1,0 +1,789 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00510A61BE97B7B001B3F26 /* Fuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B005109B1BE97B7B001B3F26 /* Fuzz.framework */; };
+		B00510F41BE9952D001B3F26 /* Fuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00510EA1BE9952D001B3F26 /* Fuzz.framework */; };
+		B00B2A3D1BF3E96400372163 /* gamut_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B00B2A3C1BF3E96400372163 /* gamut_swift.h */; };
+		B00B2A3E1BF3E96400372163 /* gamut_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B00B2A3C1BF3E96400372163 /* gamut_swift.h */; };
+		B03BCAF11BFA8D0D00EB3973 /* HTTPFailureResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE11BFA8CF900EB3973 /* HTTPFailureResponderType.swift */; };
+		B03BCAF21BFA8D0D00EB3973 /* HTTPMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE21BFA8CF900EB3973 /* HTTPMiddleware.swift */; };
+		B03BCAF31BFA8D0D00EB3973 /* HTTPRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE31BFA8CF900EB3973 /* HTTPRequestMiddlewareType.swift */; };
+		B03BCAF41BFA8D0D00EB3973 /* HTTPRequestResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE41BFA8CF900EB3973 /* HTTPRequestResponseMiddlewareType.swift */; };
+		B03BCAF61BFA8D0D00EB3973 /* HTTPResponderMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE61BFA8CF900EB3973 /* HTTPResponderMiddlewareType.swift */; };
+		B03BCAF71BFA8D0D00EB3973 /* HTTPResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE71BFA8CF900EB3973 /* HTTPResponseMiddlewareType.swift */; };
+		B03BCAFA1BFA8D0D00EB3973 /* SimpleHTTPFallibleResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAEB1BFA8CF900EB3973 /* SimpleHTTPFallibleResponder.swift */; };
+		B03BCAFB1BFA8D0D00EB3973 /* SimpleHTTPRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAEC1BFA8CF900EB3973 /* SimpleHTTPRequestMiddleware.swift */; };
+		B03BCAFC1BFA8D0D00EB3973 /* SimpleHTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAED1BFA8CF900EB3973 /* SimpleHTTPResponderType.swift */; };
+		B03BCAFD1BFA8D0E00EB3973 /* HTTPFailureResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE11BFA8CF900EB3973 /* HTTPFailureResponderType.swift */; };
+		B03BCAFE1BFA8D0E00EB3973 /* HTTPMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE21BFA8CF900EB3973 /* HTTPMiddleware.swift */; };
+		B03BCAFF1BFA8D0E00EB3973 /* HTTPRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE31BFA8CF900EB3973 /* HTTPRequestMiddlewareType.swift */; };
+		B03BCB001BFA8D0E00EB3973 /* HTTPRequestResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE41BFA8CF900EB3973 /* HTTPRequestResponseMiddlewareType.swift */; };
+		B03BCB021BFA8D0E00EB3973 /* HTTPResponderMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE61BFA8CF900EB3973 /* HTTPResponderMiddlewareType.swift */; };
+		B03BCB031BFA8D0E00EB3973 /* HTTPResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAE71BFA8CF900EB3973 /* HTTPResponseMiddlewareType.swift */; };
+		B03BCB061BFA8D0E00EB3973 /* SimpleHTTPFallibleResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAEB1BFA8CF900EB3973 /* SimpleHTTPFallibleResponder.swift */; };
+		B03BCB071BFA8D0E00EB3973 /* SimpleHTTPRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAEC1BFA8CF900EB3973 /* SimpleHTTPRequestMiddleware.swift */; };
+		B03BCB081BFA8D0E00EB3973 /* SimpleHTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAED1BFA8CF900EB3973 /* SimpleHTTPResponderType.swift */; };
+		B03BCB091BFA8D1100EB3973 /* FuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAEF1BFA8CF900EB3973 /* FuzzTests.swift */; };
+		B03BCB0A1BFA8D1200EB3973 /* FuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCAEF1BFA8CF900EB3973 /* FuzzTests.swift */; };
+		B03BCB0C1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB0B1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift */; };
+		B03BCB0D1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB0B1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift */; };
+		B03BCB0F1BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB0E1BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift */; };
+		B03BCB101BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB0E1BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift */; };
+		B03BCB121BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB111BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift */; };
+		B03BCB131BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB111BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift */; };
+		B03BCB151BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB141BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift */; };
+		B03BCB161BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB141BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift */; };
+		B03BCB181BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB171BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift */; };
+		B03BCB191BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB171BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift */; };
+		B0A4B2041BF974C800FDA0E1 /* HTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2031BF974C800FDA0E1 /* HTTPResponderType.swift */; };
+		B0A4B2051BF974C800FDA0E1 /* HTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2031BF974C800FDA0E1 /* HTTPResponderType.swift */; };
+		B0A4B2071BF974D700FDA0E1 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2061BF974D700FDA0E1 /* HTTPResponse.swift */; };
+		B0A4B2081BF974D700FDA0E1 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2061BF974D700FDA0E1 /* HTTPResponse.swift */; };
+		B0A4B20C1BF974E100FDA0E1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2091BF974E100FDA0E1 /* HTTPMethod.swift */; };
+		B0A4B20D1BF974E100FDA0E1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2091BF974E100FDA0E1 /* HTTPMethod.swift */; };
+		B0A4B20E1BF974E100FDA0E1 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B20A1BF974E100FDA0E1 /* HTTPRequest.swift */; };
+		B0A4B20F1BF974E100FDA0E1 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B20A1BF974E100FDA0E1 /* HTTPRequest.swift */; };
+		B0A4B21D1BF975D900FDA0E1 /* URI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B21C1BF975D900FDA0E1 /* URI.swift */; };
+		B0A4B21E1BF975D900FDA0E1 /* URI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B21C1BF975D900FDA0E1 /* URI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B00510A71BE97B7B001B3F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00510921BE97B7B001B3F26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B005109A1BE97B7B001B3F26;
+			remoteInfo = Currents;
+		};
+		B00510F51BE9952D001B3F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00510921BE97B7B001B3F26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B00510E91BE9952D001B3F26;
+			remoteInfo = "Currents iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B005109B1BE97B7B001B3F26 /* Fuzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fuzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510A51BE97B7B001B3F26 /* FuzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510BE1BE97BB4001B3F26 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		B00510EA1BE9952D001B3F26 /* Fuzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fuzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00510F31BE9952D001B3F26 /* FuzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00B2A3C1BF3E96400372163 /* gamut_swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gamut_swift.h; sourceTree = "<group>"; };
+		B03BCAE01BFA8CF900EB3973 /* Fuzz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fuzz.h; sourceTree = "<group>"; };
+		B03BCAE11BFA8CF900EB3973 /* HTTPFailureResponderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFailureResponderType.swift; sourceTree = "<group>"; };
+		B03BCAE21BFA8CF900EB3973 /* HTTPMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMiddleware.swift; sourceTree = "<group>"; };
+		B03BCAE31BFA8CF900EB3973 /* HTTPRequestMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddlewareType.swift; sourceTree = "<group>"; };
+		B03BCAE41BFA8CF900EB3973 /* HTTPRequestResponseMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestResponseMiddlewareType.swift; sourceTree = "<group>"; };
+		B03BCAE61BFA8CF900EB3973 /* HTTPResponderMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponderMiddlewareType.swift; sourceTree = "<group>"; };
+		B03BCAE71BFA8CF900EB3973 /* HTTPResponseMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseMiddlewareType.swift; sourceTree = "<group>"; };
+		B03BCAE91BFA8CF900EB3973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03BCAEB1BFA8CF900EB3973 /* SimpleHTTPFallibleResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHTTPFallibleResponder.swift; sourceTree = "<group>"; };
+		B03BCAEC1BFA8CF900EB3973 /* SimpleHTTPRequestMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHTTPRequestMiddleware.swift; sourceTree = "<group>"; };
+		B03BCAED1BFA8CF900EB3973 /* SimpleHTTPResponderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHTTPResponderType.swift; sourceTree = "<group>"; };
+		B03BCAEF1BFA8CF900EB3973 /* FuzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzTests.swift; sourceTree = "<group>"; };
+		B03BCAF01BFA8CF900EB3973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03BCB0B1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPFallibleResponderType.swift; path = HTTPResponderType/HTTPFallibleResponderType.swift; sourceTree = SOURCE_ROOT; };
+		B03BCB0E1BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPFallibleRequestMiddlewareType.swift; sourceTree = "<group>"; };
+		B03BCB111BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddlewareResult.swift; sourceTree = "<group>"; };
+		B03BCB141BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleHTTPFallibleRequestMiddleware.swift; sourceTree = "<group>"; };
+		B03BCB171BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPFallibleResponseMiddlewareType.swift; sourceTree = "<group>"; };
+		B0A4B2031BF974C800FDA0E1 /* HTTPResponderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponderType.swift; path = HTTPResponderType/HTTPResponderType.swift; sourceTree = SOURCE_ROOT; };
+		B0A4B2061BF974D700FDA0E1 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponse.swift; path = HTTPResponse/HTTPResponse.swift; sourceTree = SOURCE_ROOT; };
+		B0A4B2091BF974E100FDA0E1 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = HTTPRequest/HTTPMethod.swift; sourceTree = SOURCE_ROOT; };
+		B0A4B20A1BF974E100FDA0E1 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequest.swift; path = HTTPRequest/HTTPRequest.swift; sourceTree = SOURCE_ROOT; };
+		B0A4B21C1BF975D900FDA0E1 /* URI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URI.swift; path = URI/URI.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B00510971BE97B7B001B3F26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510A21BE97B7B001B3F26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00510A61BE97B7B001B3F26 /* Fuzz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510E61BE9952D001B3F26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510F01BE9952D001B3F26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00510F41BE9952D001B3F26 /* Fuzz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B00510911BE97B7B001B3F26 = {
+			isa = PBXGroup;
+			children = (
+				B00510B51BE97BB4001B3F26 /* Dependencies */,
+				B0A4B21B1BF975C700FDA0E1 /* URI */,
+				B0BDF5691BF6A0D9003BA949 /* HTTPRequest */,
+				B0A4B1FF1BF971E100FDA0E1 /* HTTPResponse */,
+				B0A4B1F21BF95EFF00FDA0E1 /* HTTPResponderType */,
+				B03BCADF1BFA8CF900EB3973 /* Fuzz */,
+				B03BCAEE1BFA8CF900EB3973 /* Fuzz Tests */,
+				B005109C1BE97B7B001B3F26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B005109C1BE97B7B001B3F26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B005109B1BE97B7B001B3F26 /* Fuzz.framework */,
+				B00510A51BE97B7B001B3F26 /* FuzzTests.xctest */,
+				B00510EA1BE9952D001B3F26 /* Fuzz.framework */,
+				B00510F31BE9952D001B3F26 /* FuzzTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B00510B51BE97BB4001B3F26 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				B00B2A3B1BF3E96400372163 /* Gamut */,
+				B00510BE1BE97BB4001B3F26 /* module.modulemap */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		B00B2A3B1BF3E96400372163 /* Gamut */ = {
+			isa = PBXGroup;
+			children = (
+				B00B2A3C1BF3E96400372163 /* gamut_swift.h */,
+			);
+			path = Gamut;
+			sourceTree = "<group>";
+		};
+		B03BCADF1BFA8CF900EB3973 /* Fuzz */ = {
+			isa = PBXGroup;
+			children = (
+				B03BCAE01BFA8CF900EB3973 /* Fuzz.h */,
+				B03BCAE21BFA8CF900EB3973 /* HTTPMiddleware.swift */,
+				B03BCB111BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift */,
+				B03BCAE31BFA8CF900EB3973 /* HTTPRequestMiddlewareType.swift */,
+				B03BCB0E1BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift */,
+				B03BCAE71BFA8CF900EB3973 /* HTTPResponseMiddlewareType.swift */,
+				B03BCB171BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift */,
+				B03BCAE41BFA8CF900EB3973 /* HTTPRequestResponseMiddlewareType.swift */,
+				B03BCAE61BFA8CF900EB3973 /* HTTPResponderMiddlewareType.swift */,
+				B03BCAE11BFA8CF900EB3973 /* HTTPFailureResponderType.swift */,
+				B03BCAE91BFA8CF900EB3973 /* Info.plist */,
+				B03BCAEB1BFA8CF900EB3973 /* SimpleHTTPFallibleResponder.swift */,
+				B03BCB141BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift */,
+				B03BCAEC1BFA8CF900EB3973 /* SimpleHTTPRequestMiddleware.swift */,
+				B03BCAED1BFA8CF900EB3973 /* SimpleHTTPResponderType.swift */,
+			);
+			path = Fuzz;
+			sourceTree = "<group>";
+		};
+		B03BCAEE1BFA8CF900EB3973 /* Fuzz Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B03BCAEF1BFA8CF900EB3973 /* FuzzTests.swift */,
+				B03BCAF01BFA8CF900EB3973 /* Info.plist */,
+			);
+			path = "Fuzz Tests";
+			sourceTree = "<group>";
+		};
+		B0A4B1F21BF95EFF00FDA0E1 /* HTTPResponderType */ = {
+			isa = PBXGroup;
+			children = (
+				B0A4B2031BF974C800FDA0E1 /* HTTPResponderType.swift */,
+				B03BCB0B1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift */,
+			);
+			name = HTTPResponderType;
+			path = HTTPServerType;
+			sourceTree = "<group>";
+		};
+		B0A4B1FF1BF971E100FDA0E1 /* HTTPResponse */ = {
+			isa = PBXGroup;
+			children = (
+				B0A4B2061BF974D700FDA0E1 /* HTTPResponse.swift */,
+			);
+			name = HTTPResponse;
+			path = Luminescence/URI;
+			sourceTree = "<group>";
+		};
+		B0A4B21B1BF975C700FDA0E1 /* URI */ = {
+			isa = PBXGroup;
+			children = (
+				B0A4B21C1BF975D900FDA0E1 /* URI.swift */,
+			);
+			name = URI;
+			path = Luminescence/URI;
+			sourceTree = "<group>";
+		};
+		B0BDF5691BF6A0D9003BA949 /* HTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B0A4B2091BF974E100FDA0E1 /* HTTPMethod.swift */,
+				B0A4B20A1BF974E100FDA0E1 /* HTTPRequest.swift */,
+			);
+			name = HTTPRequest;
+			path = Luminescence/URI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B00510981BE97B7B001B3F26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00B2A3D1BF3E96400372163 /* gamut_swift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510E71BE9952D001B3F26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00B2A3E1BF3E96400372163 /* gamut_swift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B005109A1BE97B7B001B3F26 /* Fuzz OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00510AF1BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz OSX" */;
+			buildPhases = (
+				B00510961BE97B7B001B3F26 /* Sources */,
+				B00510971BE97B7B001B3F26 /* Frameworks */,
+				B00510981BE97B7B001B3F26 /* Headers */,
+				B00510991BE97B7B001B3F26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fuzz OSX";
+			productName = Currents;
+			productReference = B005109B1BE97B7B001B3F26 /* Fuzz.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B00510A41BE97B7B001B3F26 /* Fuzz OSX Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00510B21BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz OSX Tests" */;
+			buildPhases = (
+				B00510A11BE97B7B001B3F26 /* Sources */,
+				B00510A21BE97B7B001B3F26 /* Frameworks */,
+				B00510A31BE97B7B001B3F26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B00510A81BE97B7B001B3F26 /* PBXTargetDependency */,
+			);
+			name = "Fuzz OSX Tests";
+			productName = CurrentsTests;
+			productReference = B00510A51BE97B7B001B3F26 /* FuzzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B00510E91BE9952D001B3F26 /* Fuzz iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00510FB1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz iOS" */;
+			buildPhases = (
+				B00510E51BE9952D001B3F26 /* Sources */,
+				B00510E61BE9952D001B3F26 /* Frameworks */,
+				B00510E71BE9952D001B3F26 /* Headers */,
+				B00510E81BE9952D001B3F26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fuzz iOS";
+			productName = "Currents iOS";
+			productReference = B00510EA1BE9952D001B3F26 /* Fuzz.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B00510F21BE9952D001B3F26 /* Fuzz iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00510FE1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz iOS Tests" */;
+			buildPhases = (
+				B00510EF1BE9952D001B3F26 /* Sources */,
+				B00510F01BE9952D001B3F26 /* Frameworks */,
+				B00510F11BE9952D001B3F26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B00510F61BE9952D001B3F26 /* PBXTargetDependency */,
+			);
+			name = "Fuzz iOS Tests";
+			productName = "Currents iOSTests";
+			productReference = B00510F31BE9952D001B3F26 /* FuzzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B00510921BE97B7B001B3F26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Zewo;
+				TargetAttributes = {
+					B005109A1BE97B7B001B3F26 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					B00510A41BE97B7B001B3F26 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					B00510E91BE9952D001B3F26 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					B00510F21BE9952D001B3F26 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = B00510951BE97B7B001B3F26 /* Build configuration list for PBXProject "Fuzz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B00510911BE97B7B001B3F26;
+			productRefGroup = B005109C1BE97B7B001B3F26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B005109A1BE97B7B001B3F26 /* Fuzz OSX */,
+				B00510A41BE97B7B001B3F26 /* Fuzz OSX Tests */,
+				B00510E91BE9952D001B3F26 /* Fuzz iOS */,
+				B00510F21BE9952D001B3F26 /* Fuzz iOS Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B00510991BE97B7B001B3F26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510A31BE97B7B001B3F26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510E81BE9952D001B3F26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510F11BE9952D001B3F26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B00510961BE97B7B001B3F26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A4B21D1BF975D900FDA0E1 /* URI.swift in Sources */,
+				B03BCB0F1BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift in Sources */,
+				B03BCAFB1BFA8D0D00EB3973 /* SimpleHTTPRequestMiddleware.swift in Sources */,
+				B0A4B2041BF974C800FDA0E1 /* HTTPResponderType.swift in Sources */,
+				B03BCB121BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift in Sources */,
+				B03BCAF61BFA8D0D00EB3973 /* HTTPResponderMiddlewareType.swift in Sources */,
+				B03BCAF11BFA8D0D00EB3973 /* HTTPFailureResponderType.swift in Sources */,
+				B0A4B20C1BF974E100FDA0E1 /* HTTPMethod.swift in Sources */,
+				B03BCAF31BFA8D0D00EB3973 /* HTTPRequestMiddlewareType.swift in Sources */,
+				B0A4B2071BF974D700FDA0E1 /* HTTPResponse.swift in Sources */,
+				B03BCB0C1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift in Sources */,
+				B03BCAF21BFA8D0D00EB3973 /* HTTPMiddleware.swift in Sources */,
+				B03BCAFA1BFA8D0D00EB3973 /* SimpleHTTPFallibleResponder.swift in Sources */,
+				B03BCB151BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */,
+				B03BCAF41BFA8D0D00EB3973 /* HTTPRequestResponseMiddlewareType.swift in Sources */,
+				B03BCAFC1BFA8D0D00EB3973 /* SimpleHTTPResponderType.swift in Sources */,
+				B03BCB181BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */,
+				B03BCAF71BFA8D0D00EB3973 /* HTTPResponseMiddlewareType.swift in Sources */,
+				B0A4B20E1BF974E100FDA0E1 /* HTTPRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510A11BE97B7B001B3F26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03BCB091BFA8D1100EB3973 /* FuzzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510E51BE9952D001B3F26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A4B21E1BF975D900FDA0E1 /* URI.swift in Sources */,
+				B03BCB101BFA8FF100EB3973 /* HTTPFallibleRequestMiddlewareType.swift in Sources */,
+				B03BCB071BFA8D0E00EB3973 /* SimpleHTTPRequestMiddleware.swift in Sources */,
+				B0A4B2051BF974C800FDA0E1 /* HTTPResponderType.swift in Sources */,
+				B03BCB131BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift in Sources */,
+				B03BCB021BFA8D0E00EB3973 /* HTTPResponderMiddlewareType.swift in Sources */,
+				B03BCAFD1BFA8D0E00EB3973 /* HTTPFailureResponderType.swift in Sources */,
+				B0A4B20D1BF974E100FDA0E1 /* HTTPMethod.swift in Sources */,
+				B03BCAFF1BFA8D0E00EB3973 /* HTTPRequestMiddlewareType.swift in Sources */,
+				B0A4B2081BF974D700FDA0E1 /* HTTPResponse.swift in Sources */,
+				B03BCB0D1BFA8EF000EB3973 /* HTTPFallibleResponderType.swift in Sources */,
+				B03BCAFE1BFA8D0E00EB3973 /* HTTPMiddleware.swift in Sources */,
+				B03BCB061BFA8D0E00EB3973 /* SimpleHTTPFallibleResponder.swift in Sources */,
+				B03BCB161BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */,
+				B03BCB001BFA8D0E00EB3973 /* HTTPRequestResponseMiddlewareType.swift in Sources */,
+				B03BCB081BFA8D0E00EB3973 /* SimpleHTTPResponderType.swift in Sources */,
+				B03BCB191BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */,
+				B03BCB031BFA8D0E00EB3973 /* HTTPResponseMiddlewareType.swift in Sources */,
+				B0A4B20F1BF974E100FDA0E1 /* HTTPRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00510EF1BE9952D001B3F26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B03BCB0A1BFA8D1200EB3973 /* FuzzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B00510A81BE97B7B001B3F26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B005109A1BE97B7B001B3F26 /* Fuzz OSX */;
+			targetProxy = B00510A71BE97B7B001B3F26 /* PBXContainerItemProxy */;
+		};
+		B00510F61BE9952D001B3F26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B00510E91BE9952D001B3F26 /* Fuzz iOS */;
+			targetProxy = B00510F51BE9952D001B3F26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B00510AD1BE97B7B001B3F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B00510AE1BE97B7B001B3F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B00510B01BE97B7B001B3F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Fuzz/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzzOSX;
+				PRODUCT_MODULE_NAME = Fuzz;
+				PRODUCT_NAME = Fuzz;
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B00510B11BE97B7B001B3F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Fuzz/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzzOSX;
+				PRODUCT_MODULE_NAME = Fuzz;
+				PRODUCT_NAME = Fuzz;
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
+			};
+			name = Release;
+		};
+		B00510B31BE97B7B001B3F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Fuzz Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzzOSXTests;
+				PRODUCT_NAME = FuzzTests;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B00510B41BE97B7B001B3F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Fuzz Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzzOSXTests;
+				PRODUCT_NAME = FuzzTests;
+			};
+			name = Release;
+		};
+		B00510FC1BE9952D001B3F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Fuzz/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzziOS;
+				PRODUCT_MODULE_NAME = Fuzz;
+				PRODUCT_NAME = Fuzz;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B00510FD1BE9952D001B3F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Fuzz/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzziOS;
+				PRODUCT_MODULE_NAME = Fuzz;
+				PRODUCT_NAME = Fuzz;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Dependencies";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B00510FF1BE9952D001B3F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Fuzz Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzziOSTests;
+				PRODUCT_NAME = FuzzTests;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B00511001BE9952D001B3F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Fuzz Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.FuzziOSTests;
+				PRODUCT_NAME = FuzzTests;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B00510951BE97B7B001B3F26 /* Build configuration list for PBXProject "Fuzz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00510AD1BE97B7B001B3F26 /* Debug */,
+				B00510AE1BE97B7B001B3F26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00510AF1BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00510B01BE97B7B001B3F26 /* Debug */,
+				B00510B11BE97B7B001B3F26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00510B21BE97B7B001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz OSX Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00510B31BE97B7B001B3F26 /* Debug */,
+				B00510B41BE97B7B001B3F26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00510FB1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00510FC1BE9952D001B3F26 /* Debug */,
+				B00510FD1BE9952D001B3F26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00510FE1BE9952D001B3F26 /* Build configuration list for PBXNativeTarget "Fuzz iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00510FF1BE9952D001B3F26 /* Debug */,
+				B00511001BE9952D001B3F26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B00510921BE97B7B001B3F26 /* Project object */;
+}
