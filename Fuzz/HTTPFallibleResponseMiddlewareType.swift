@@ -25,3 +25,27 @@
 public protocol HTTPFallibleResponseMiddlewareType {
     func respond(response: HTTPResponse) throws -> HTTPResponse
 }
+
+public func >>>(responder: HTTPFallibleResponderType, middleware: HTTPFallibleResponseMiddlewareType) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return try middleware.respond(responder.respond(request))
+    }
+}
+
+public func >>>(respond: HTTPRequest throws -> HTTPResponse, middleware: HTTPFallibleResponseMiddlewareType) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return try middleware.respond(respond(request))
+    }
+}
+
+public func >>>(responder: HTTPFallibleResponderType, middlewareRespond: HTTPResponse throws -> HTTPResponse) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return try middlewareRespond(responder.respond(request))
+    }
+}
+
+public func >>>(respond: HTTPRequest throws -> HTTPResponse, middlewareRespond: HTTPResponse throws -> HTTPResponse) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return try middlewareRespond(respond(request))
+    }
+}

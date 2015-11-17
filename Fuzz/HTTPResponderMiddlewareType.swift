@@ -25,3 +25,19 @@
 public protocol HTTPResponderMiddlewareType {
     func respond(respond: HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)
 }
+
+func >>>(responder: HTTPResponderType, middleware: HTTPResponderMiddlewareType) -> HTTPResponderType {
+    return SimpleHTTPResponder(respond: middleware.respond(responder.respond))
+}
+
+func >>>(respond: HTTPRequest -> HTTPResponse, middleware: HTTPResponderMiddlewareType) -> HTTPResponderType {
+    return SimpleHTTPResponder(respond: middleware.respond(respond))
+}
+
+func >>>(responder: HTTPResponderType, middlewareRespond: (HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)) -> HTTPResponderType {
+    return SimpleHTTPResponder(respond: middlewareRespond(responder.respond))
+}
+
+func >>>(respond: HTTPRequest -> HTTPResponse, middlewareRespond: (HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)) -> HTTPResponderType {
+    return SimpleHTTPResponder(respond: middlewareRespond(respond))
+}

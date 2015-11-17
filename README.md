@@ -14,8 +14,8 @@ Fuzz
 ## Features
 
 - [x] No `Foundation` dependency (**Linux ready**)
-- [x] Request Middleware
-- [x] Response Middleware
+- [x] HTTP Request Middleware
+- [x] HTTP Response Middleware
 
 ## Usage
 

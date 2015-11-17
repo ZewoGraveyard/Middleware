@@ -25,3 +25,51 @@
 public protocol HTTPResponseMiddlewareType {
     func respond(response: HTTPResponse) -> HTTPResponse
 }
+
+public func >>>(responder: HTTPResponderType, middleware: HTTPResponseMiddlewareType) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        return middleware.respond(responder.respond(request))
+    }
+}
+
+public func >>>(respond: HTTPRequest -> HTTPResponse, middleware: HTTPResponseMiddlewareType) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        return middleware.respond(respond(request))
+    }
+}
+
+public func >>>(responder: HTTPResponderType, middlewareRespond: HTTPResponse -> HTTPResponse) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        return middlewareRespond(responder.respond(request))
+    }
+}
+
+public func >>>(respond: HTTPRequest -> HTTPResponse, middlewareRespond: HTTPResponse -> HTTPResponse) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        return middlewareRespond(respond(request))
+    }
+}
+
+public func >>>(responder: HTTPFallibleResponderType, middleware: HTTPResponseMiddlewareType) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return middleware.respond(try responder.respond(request))
+    }
+}
+
+public func >>>(respond: HTTPRequest throws -> HTTPResponse, middleware: HTTPResponseMiddlewareType) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return middleware.respond(try respond(request))
+    }
+}
+
+public func >>>(responder: HTTPFallibleResponderType, middlewareRespond: HTTPResponse -> HTTPResponse) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return middlewareRespond(try responder.respond(request))
+    }
+}
+
+public func >>>(respond: HTTPRequest throws -> HTTPResponse, middlewareRespond: HTTPResponse -> HTTPResponse) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        return middlewareRespond(try respond(request))
+    }
+}

@@ -25,3 +25,180 @@
 public protocol HTTPRequestMiddlewareType {
     func respond(request: HTTPRequest) -> HTTPRequestMiddlewareResult
 }
+
+public func >>>(middlewareA: HTTPRequestMiddlewareType, middlewareB: HTTPRequestMiddlewareType) -> HTTPRequestMiddlewareType {
+    return SimpleHTTPRequestMiddleware { request in
+        switch middlewareA.respond(request) {
+        case .Next(let request):
+            return middlewareB.respond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+public func >>>(middlewareARespond: HTTPRequest -> HTTPRequestMiddlewareResult, middlewareB: HTTPRequestMiddlewareType) -> HTTPRequestMiddlewareType {
+    return SimpleHTTPRequestMiddleware { request in
+        switch middlewareARespond(request) {
+        case .Next(let request):
+            return middlewareB.respond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+public func >>>(middlewareA: HTTPRequestMiddlewareType, middlewareBRespond: HTTPRequest -> HTTPRequestMiddlewareResult) -> HTTPRequestMiddlewareType {
+    return SimpleHTTPRequestMiddleware { request in
+        switch middlewareA.respond(request) {
+        case .Next(let request):
+            return middlewareBRespond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+public func >>>(middlewareARespond: HTTPRequest -> HTTPRequestMiddlewareResult, middlewareBRespond: HTTPRequest -> HTTPRequestMiddlewareResult) -> HTTPRequestMiddlewareType {
+    return SimpleHTTPRequestMiddleware { request in
+        switch middlewareARespond(request) {
+        case .Next(let request):
+            return middlewareBRespond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+
+public func >>>(middlewareA: HTTPRequestMiddlewareType, middlewareB: HTTPFallibleRequestMiddlewareType) -> HTTPFallibleRequestMiddlewareType {
+    return SimpleHTTPFallibleRequestMiddleware { request in
+        switch middlewareA.respond(request) {
+        case .Next(let request):
+            return try middlewareB.respond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+public func >>>(middlewareARespond: HTTPRequest -> HTTPRequestMiddlewareResult, middlewareB: HTTPFallibleRequestMiddlewareType) -> HTTPFallibleRequestMiddlewareType {
+    return SimpleHTTPFallibleRequestMiddleware { request in
+        switch middlewareARespond(request) {
+        case .Next(let request):
+            return try middlewareB.respond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+public func >>>(middlewareA: HTTPRequestMiddlewareType, middlewareBRespond: HTTPRequest throws -> HTTPRequestMiddlewareResult) -> HTTPFallibleRequestMiddlewareType {
+    return SimpleHTTPFallibleRequestMiddleware { request in
+        switch middlewareA.respond(request) {
+        case .Next(let request):
+            return try middlewareBRespond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+public func >>>(middlewareARespond: HTTPRequest -> HTTPRequestMiddlewareResult, middlewareBRespond: HTTPRequest throws -> HTTPRequestMiddlewareResult) -> HTTPFallibleRequestMiddlewareType {
+    return SimpleHTTPFallibleRequestMiddleware { request in
+        switch middlewareARespond(request) {
+        case .Next(let request):
+            return try middlewareBRespond(request)
+        case .Respond(let response):
+            return .Respond(response)
+        }
+    }
+}
+
+public func >>>(middleware: HTTPRequestMiddlewareType, responder: HTTPFallibleResponderType) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        switch middleware.respond(request) {
+        case .Next(let request):
+            return try responder.respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}
+
+public func >>>(middlewareRespond: HTTPRequest -> HTTPRequestMiddlewareResult, responder: HTTPFallibleResponderType) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        switch middlewareRespond(request) {
+        case .Next(let request):
+            return try responder.respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}
+
+public func >>>(middleware: HTTPRequestMiddlewareType, respond: HTTPRequest throws -> HTTPResponse) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        switch middleware.respond(request) {
+        case .Next(let request):
+            return try respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}
+
+public func >>>(middlewareRespond: HTTPRequest -> HTTPRequestMiddlewareResult, respond: HTTPRequest throws -> HTTPResponse) -> HTTPFallibleResponderType {
+    return SimpleHTTPFallibleResponder { request in
+        switch middlewareRespond(request) {
+        case .Next(let request):
+            return try respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}
+
+public func >>>(middleware: HTTPRequestMiddlewareType, responder: HTTPResponderType) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        switch middleware.respond(request) {
+        case .Next(let request):
+            return responder.respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}
+
+public func >>>(middlewareRespond: HTTPRequest -> HTTPRequestMiddlewareResult, responder: HTTPResponderType) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        switch middlewareRespond(request) {
+        case .Next(let request):
+            return responder.respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}
+
+public func >>>(middleware: HTTPRequestMiddlewareType, respond: HTTPRequest -> HTTPResponse) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        switch middleware.respond(request) {
+        case .Next(let request):
+            return respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}
+
+public func >>>(middlewareRespond: HTTPRequest -> HTTPRequestMiddlewareResult, respond: HTTPRequest -> HTTPResponse) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        switch middlewareRespond(request) {
+        case .Next(let request):
+            return respond(request)
+        case .Respond(let response):
+            return response
+        }
+    }
+}

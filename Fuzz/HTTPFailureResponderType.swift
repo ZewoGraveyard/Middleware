@@ -25,3 +25,43 @@
 public protocol HTTPFailureResponderType {
     func respond(error: ErrorType) -> HTTPResponse
 }
+
+public func >>>(responder: HTTPFallibleResponderType, failureResponder: HTTPFailureResponderType) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        do {
+            return try responder.respond(request)
+        } catch {
+            return failureResponder.respond(error)
+        }
+    }
+}
+
+public func >>>(respond: HTTPRequest throws -> HTTPResponse, failureResponder: HTTPFailureResponderType) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        do {
+            return try respond(request)
+        } catch {
+            return failureResponder.respond(error)
+        }
+    }
+}
+
+public func >>>(responder: HTTPFallibleResponderType, respondFailure: ErrorType -> HTTPResponse) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        do {
+            return try responder.respond(request)
+        } catch {
+            return respondFailure(error)
+        }
+    }
+}
+
+public func >>>(respond: HTTPRequest throws -> HTTPResponse, respondFailure: ErrorType -> HTTPResponse) -> HTTPResponderType {
+    return SimpleHTTPResponder { request in
+        do {
+            return try respond(request)
+        } catch {
+            return respondFailure(error)
+        }
+    }
+}
