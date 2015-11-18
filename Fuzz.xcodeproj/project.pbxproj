@@ -41,6 +41,8 @@
 		B03BCB161BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB141BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift */; };
 		B03BCB181BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB171BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift */; };
 		B03BCB191BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03BCB171BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift */; };
+		B06ABA541BFC324E00BB869A /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06ABA531BFC324E00BB869A /* HTTPStatus.swift */; };
+		B06ABA551BFC324E00BB869A /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06ABA531BFC324E00BB869A /* HTTPStatus.swift */; };
 		B0A4B2041BF974C800FDA0E1 /* HTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2031BF974C800FDA0E1 /* HTTPResponderType.swift */; };
 		B0A4B2051BF974C800FDA0E1 /* HTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2031BF974C800FDA0E1 /* HTTPResponderType.swift */; };
 		B0A4B2071BF974D700FDA0E1 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A4B2061BF974D700FDA0E1 /* HTTPResponse.swift */; };
@@ -95,6 +97,7 @@
 		B03BCB111BFA900B00EB3973 /* HTTPRequestMiddlewareResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddlewareResult.swift; sourceTree = "<group>"; };
 		B03BCB141BFA906D00EB3973 /* SimpleHTTPFallibleRequestMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleHTTPFallibleRequestMiddleware.swift; sourceTree = "<group>"; };
 		B03BCB171BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPFallibleResponseMiddlewareType.swift; sourceTree = "<group>"; };
+		B06ABA531BFC324E00BB869A /* HTTPStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPStatus.swift; path = HTTPResponse/HTTPStatus.swift; sourceTree = SOURCE_ROOT; };
 		B0A4B2031BF974C800FDA0E1 /* HTTPResponderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponderType.swift; path = HTTPResponderType/HTTPResponderType.swift; sourceTree = SOURCE_ROOT; };
 		B0A4B2061BF974D700FDA0E1 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponse.swift; path = HTTPResponse/HTTPResponse.swift; sourceTree = SOURCE_ROOT; };
 		B0A4B2091BF974E100FDA0E1 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = HTTPRequest/HTTPMethod.swift; sourceTree = SOURCE_ROOT; };
@@ -222,6 +225,7 @@
 		B0A4B1FF1BF971E100FDA0E1 /* HTTPResponse */ = {
 			isa = PBXGroup;
 			children = (
+				B06ABA531BFC324E00BB869A /* HTTPStatus.swift */,
 				B0A4B2061BF974D700FDA0E1 /* HTTPResponse.swift */,
 			);
 			name = HTTPResponse;
@@ -440,6 +444,7 @@
 				B03BCB181BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */,
 				B03BCAF71BFA8D0D00EB3973 /* HTTPResponseMiddlewareType.swift in Sources */,
 				B0A4B20E1BF974E100FDA0E1 /* HTTPRequest.swift in Sources */,
+				B06ABA541BFC324E00BB869A /* HTTPStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +479,7 @@
 				B03BCB191BFA91D200EB3973 /* HTTPFallibleResponseMiddlewareType.swift in Sources */,
 				B03BCB031BFA8D0E00EB3973 /* HTTPResponseMiddlewareType.swift in Sources */,
 				B0A4B20F1BF974E100FDA0E1 /* HTTPRequest.swift in Sources */,
+				B06ABA551BFC324E00BB869A /* HTTPStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
