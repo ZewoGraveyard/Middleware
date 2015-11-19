@@ -22,6 +22,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import Curvature
+import Otherside
+
 public struct SimpleHTTPFallibleResponder : HTTPFallibleResponderType {
     let respond: (request: HTTPRequest) throws -> HTTPResponse
     public func respond(request: HTTPRequest) throws -> HTTPResponse {

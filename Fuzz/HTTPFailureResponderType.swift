@@ -22,6 +22,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import Curvature
+import Otherside
+
 public protocol HTTPFailureResponderType {
     func respond(error: ErrorType) -> HTTPResponse
 }

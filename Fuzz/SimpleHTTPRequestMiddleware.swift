@@ -22,6 +22,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import Curvature
+
 public struct SimpleHTTPRequestMiddleware : HTTPRequestMiddlewareType {
     let respond: (request: HTTPRequest) -> HTTPRequestMiddlewareResult
     public func respond(request: HTTPRequest) -> HTTPRequestMiddlewareResult{
