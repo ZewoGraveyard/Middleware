@@ -60,7 +60,7 @@ To integrate Fuzz into your Xcode project using CocoaPods, specify it in your `P
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-pod 'Fuzz'
+pod 'Fuzz', '0.1'
 ```
 
 Then, run the following command:
@@ -83,7 +83,7 @@ $ brew install carthage
 To integrate **Fuzz** into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Zewo/Fuzz"
+github "Zewo/Fuzz" == 0.1
 ```
 
 ### Manually
@@ -123,6 +123,13 @@ $ git submodule add https://github.com/Zewo/Fuzz.git
 - And that's it!
 
 > The `Fuzz.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+
+###Command Line Application
+
+To use **Fuzz** in a command line application:
+
+- Install the [Swift Command Line Application](https://github.com/Zewo/Swift-Command-Line-Application-Template) Xcode template
+- Follow [Cocoa Pods](#cocoapods), [Carthage](#carthage) or [Embedded Framework](#embedded-framework) instructions.
 
 License
 -------
