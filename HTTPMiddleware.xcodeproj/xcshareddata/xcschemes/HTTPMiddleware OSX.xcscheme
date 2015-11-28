@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-               BuildableName = "Fuzz.framework"
-               BlueprintName = "Fuzz OSX"
-               ReferencedContainer = "container:Fuzz.xcodeproj">
+               BuildableName = "HTTPMiddleware.framework"
+               BlueprintName = "HTTPMiddleware OSX"
+               ReferencedContainer = "container:HTTPMiddleware.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B00510A41BE97B7B001B3F26"
-               BuildableName = "FuzzTests.xctest"
-               BlueprintName = "Fuzz OSX Tests"
-               ReferencedContainer = "container:Fuzz.xcodeproj">
+               BuildableName = "HTTPMiddlewareTests.xctest"
+               BlueprintName = "HTTPMiddleware OSX Tests"
+               ReferencedContainer = "container:HTTPMiddleware.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Fuzz.framework"
-            BlueprintName = "Fuzz OSX"
-            ReferencedContainer = "container:Fuzz.xcodeproj">
+            BuildableName = "HTTPMiddleware.framework"
+            BlueprintName = "HTTPMiddleware OSX"
+            ReferencedContainer = "container:HTTPMiddleware.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Fuzz.framework"
-            BlueprintName = "Fuzz OSX"
-            ReferencedContainer = "container:Fuzz.xcodeproj">
+            BuildableName = "HTTPMiddleware.framework"
+            BlueprintName = "HTTPMiddleware OSX"
+            ReferencedContainer = "container:HTTPMiddleware.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B005109A1BE97B7B001B3F26"
-            BuildableName = "Fuzz.framework"
-            BlueprintName = "Fuzz OSX"
-            ReferencedContainer = "container:Fuzz.xcodeproj">
+            BuildableName = "HTTPMiddleware.framework"
+            BlueprintName = "HTTPMiddleware OSX"
+            ReferencedContainer = "container:HTTPMiddleware.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

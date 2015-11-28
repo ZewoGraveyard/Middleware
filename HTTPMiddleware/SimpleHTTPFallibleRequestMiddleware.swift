@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Curvature
+import HTTP
 
 public struct SimpleHTTPFallibleRequestMiddleware : HTTPFallibleRequestMiddlewareType {
     let respond: (request: HTTPRequest) throws -> HTTPRequestMiddlewareResult

@@ -22,8 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Curvature
-import Otherside
+import HTTP
 
 public struct SimpleHTTPResponder : HTTPResponderType {
     let respond: (request: HTTPRequest) -> HTTPResponse

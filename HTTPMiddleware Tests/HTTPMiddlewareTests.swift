@@ -1,4 +1,4 @@
-// FuzzTests.swift
+// HTTPMiddlewareTests.swift
 //
 // The MIT License (MIT)
 //
@@ -23,9 +23,10 @@
 // SOFTWARE.
 
 import XCTest
-import Fuzz
+import HTTP
+import HTTPMiddleware
 
-class FuzzTests: XCTestCase {
+class HTTPMiddlewareTests: XCTestCase {
     func testRequestMiddlewareResponderNext() {
         struct Middleware : HTTPRequestMiddlewareType {
             func respond(request: HTTPRequest) -> HTTPRequestMiddlewareResult {

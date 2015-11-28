@@ -1,4 +1,4 @@
-// HTTPRequestResponseMiddlewareType.swift
+// HTTPRequestMiddlewareResult.swift
 //
 // The MIT License (MIT)
 //
@@ -22,25 +22,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import Curvature
-import Otherside
+import HTTP
 
-public protocol HTTPResponderMiddlewareType {
-    func respond(respond: HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)
-}
-
-func >>>(responder: HTTPResponderType, middleware: HTTPResponderMiddlewareType) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middleware.respond(responder.respond))
-}
-
-func >>>(respond: HTTPRequest -> HTTPResponse, middleware: HTTPResponderMiddlewareType) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middleware.respond(respond))
-}
-
-func >>>(responder: HTTPResponderType, middlewareRespond: (HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middlewareRespond(responder.respond))
-}
-
-func >>>(respond: HTTPRequest -> HTTPResponse, middlewareRespond: (HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middlewareRespond(respond))
+public enum HTTPRequestMiddlewareResult {
+    case Next(HTTPRequest)
+    case Respond(HTTPResponse)
 }
