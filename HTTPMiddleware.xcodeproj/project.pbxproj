@@ -7,32 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B0BDB0DC1C09F7760001F7D6 /* HTTPFailureResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CA1C09F7650001F7D6 /* HTTPFailureResponderType.swift */; };
-		B0BDB0DD1C09F7760001F7D6 /* HTTPFallibleRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CB1C09F7650001F7D6 /* HTTPFallibleRequestMiddlewareType.swift */; };
-		B0BDB0DE1C09F7760001F7D6 /* HTTPFallibleResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CC1C09F7650001F7D6 /* HTTPFallibleResponseMiddlewareType.swift */; };
-		B0BDB0DF1C09F7760001F7D6 /* HTTPMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CE1C09F7650001F7D6 /* HTTPMiddleware.swift */; };
-		B0BDB0E01C09F7760001F7D6 /* HTTPRequestMiddlewareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CF1C09F7650001F7D6 /* HTTPRequestMiddlewareResult.swift */; };
-		B0BDB0E11C09F7760001F7D6 /* HTTPRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D01C09F7650001F7D6 /* HTTPRequestMiddlewareType.swift */; };
-		B0BDB0E21C09F7760001F7D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D11C09F7650001F7D6 /* HTTPRequestResponseMiddlewareType.swift */; };
-		B0BDB0E31C09F7760001F7D6 /* HTTPResponderMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D21C09F7650001F7D6 /* HTTPResponderMiddlewareType.swift */; };
-		B0BDB0E41C09F7760001F7D6 /* HTTPResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D31C09F7650001F7D6 /* HTTPResponseMiddlewareType.swift */; };
-		B0BDB0E51C09F7760001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D51C09F7650001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift */; };
-		B0BDB0E61C09F7760001F7D6 /* SimpleHTTPFallibleResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D61C09F7650001F7D6 /* SimpleHTTPFallibleResponder.swift */; };
-		B0BDB0E71C09F7760001F7D6 /* SimpleHTTPRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D71C09F7650001F7D6 /* SimpleHTTPRequestMiddleware.swift */; };
-		B0BDB0E81C09F7760001F7D6 /* SimpleHTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D81C09F7650001F7D6 /* SimpleHTTPResponderType.swift */; };
-		B0BDB0E91C09F7770001F7D6 /* HTTPFailureResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CA1C09F7650001F7D6 /* HTTPFailureResponderType.swift */; };
-		B0BDB0EA1C09F7770001F7D6 /* HTTPFallibleRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CB1C09F7650001F7D6 /* HTTPFallibleRequestMiddlewareType.swift */; };
-		B0BDB0EB1C09F7770001F7D6 /* HTTPFallibleResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CC1C09F7650001F7D6 /* HTTPFallibleResponseMiddlewareType.swift */; };
-		B0BDB0EC1C09F7770001F7D6 /* HTTPMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CE1C09F7650001F7D6 /* HTTPMiddleware.swift */; };
-		B0BDB0ED1C09F7770001F7D6 /* HTTPRequestMiddlewareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0CF1C09F7650001F7D6 /* HTTPRequestMiddlewareResult.swift */; };
-		B0BDB0EE1C09F7770001F7D6 /* HTTPRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D01C09F7650001F7D6 /* HTTPRequestMiddlewareType.swift */; };
-		B0BDB0EF1C09F7770001F7D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D11C09F7650001F7D6 /* HTTPRequestResponseMiddlewareType.swift */; };
-		B0BDB0F01C09F7770001F7D6 /* HTTPResponderMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D21C09F7650001F7D6 /* HTTPResponderMiddlewareType.swift */; };
-		B0BDB0F11C09F7770001F7D6 /* HTTPResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D31C09F7650001F7D6 /* HTTPResponseMiddlewareType.swift */; };
-		B0BDB0F21C09F7770001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D51C09F7650001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift */; };
-		B0BDB0F31C09F7770001F7D6 /* SimpleHTTPFallibleResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D61C09F7650001F7D6 /* SimpleHTTPFallibleResponder.swift */; };
-		B0BDB0F41C09F7770001F7D6 /* SimpleHTTPRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D71C09F7650001F7D6 /* SimpleHTTPRequestMiddleware.swift */; };
-		B0BDB0F51C09F7770001F7D6 /* SimpleHTTPResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDB0D81C09F7650001F7D6 /* SimpleHTTPResponderType.swift */; };
+		B0D2536A1C0B6370002486D6 /* HTTPFailureResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253621C0B6370002486D6 /* HTTPFailureResponderType.swift */; };
+		B0D2536B1C0B6370002486D6 /* HTTPFailureResponderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253621C0B6370002486D6 /* HTTPFailureResponderType.swift */; };
+		B0D2536C1C0B6370002486D6 /* HTTPMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253631C0B6370002486D6 /* HTTPMiddleware.swift */; };
+		B0D2536D1C0B6370002486D6 /* HTTPMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253631C0B6370002486D6 /* HTTPMiddleware.swift */; };
+		B0D2536E1C0B6370002486D6 /* HTTPRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253641C0B6370002486D6 /* HTTPRequestMiddleware.swift */; };
+		B0D2536F1C0B6370002486D6 /* HTTPRequestMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253641C0B6370002486D6 /* HTTPRequestMiddleware.swift */; };
+		B0D253701C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253651C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift */; };
+		B0D253711C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253651C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift */; };
+		B0D253721C0B6370002486D6 /* HTTPRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253661C0B6370002486D6 /* HTTPRequestMiddlewareType.swift */; };
+		B0D253731C0B6370002486D6 /* HTTPRequestMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253661C0B6370002486D6 /* HTTPRequestMiddlewareType.swift */; };
+		B0D253741C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253671C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift */; };
+		B0D253751C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253671C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift */; };
+		B0D253761C0B6370002486D6 /* HTTPResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253681C0B6370002486D6 /* HTTPResponder.swift */; };
+		B0D253771C0B6370002486D6 /* HTTPResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253681C0B6370002486D6 /* HTTPResponder.swift */; };
+		B0D253781C0B6370002486D6 /* HTTPResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253691C0B6370002486D6 /* HTTPResponseMiddlewareType.swift */; };
+		B0D253791C0B6370002486D6 /* HTTPResponseMiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253691C0B6370002486D6 /* HTTPResponseMiddlewareType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,24 +73,19 @@
 /* Begin PBXFileReference section */
 		B005109B1BE97B7B001B3F26 /* HTTPMiddleware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPMiddleware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00510EA1BE9952D001B3F26 /* HTTPMiddleware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPMiddleware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0BDB0CA1C09F7650001F7D6 /* HTTPFailureResponderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFailureResponderType.swift; sourceTree = "<group>"; };
-		B0BDB0CB1C09F7650001F7D6 /* HTTPFallibleRequestMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFallibleRequestMiddlewareType.swift; sourceTree = "<group>"; };
-		B0BDB0CC1C09F7650001F7D6 /* HTTPFallibleResponseMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFallibleResponseMiddlewareType.swift; sourceTree = "<group>"; };
 		B0BDB0CD1C09F7650001F7D6 /* HTTPMiddleware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPMiddleware.h; sourceTree = "<group>"; };
-		B0BDB0CE1C09F7650001F7D6 /* HTTPMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMiddleware.swift; sourceTree = "<group>"; };
-		B0BDB0CF1C09F7650001F7D6 /* HTTPRequestMiddlewareResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddlewareResult.swift; sourceTree = "<group>"; };
-		B0BDB0D01C09F7650001F7D6 /* HTTPRequestMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddlewareType.swift; sourceTree = "<group>"; };
-		B0BDB0D11C09F7650001F7D6 /* HTTPRequestResponseMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestResponseMiddlewareType.swift; sourceTree = "<group>"; };
-		B0BDB0D21C09F7650001F7D6 /* HTTPResponderMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponderMiddlewareType.swift; sourceTree = "<group>"; };
-		B0BDB0D31C09F7650001F7D6 /* HTTPResponseMiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseMiddlewareType.swift; sourceTree = "<group>"; };
 		B0BDB0D41C09F7650001F7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0BDB0D51C09F7650001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHTTPFallibleRequestMiddleware.swift; sourceTree = "<group>"; };
-		B0BDB0D61C09F7650001F7D6 /* SimpleHTTPFallibleResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHTTPFallibleResponder.swift; sourceTree = "<group>"; };
-		B0BDB0D71C09F7650001F7D6 /* SimpleHTTPRequestMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHTTPRequestMiddleware.swift; sourceTree = "<group>"; };
-		B0BDB0D81C09F7650001F7D6 /* SimpleHTTPResponderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHTTPResponderType.swift; sourceTree = "<group>"; };
 		B0BDB0DA1C09F7650001F7D6 /* HTTPMiddlewareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMiddlewareTests.swift; sourceTree = "<group>"; };
 		B0BDB0DB1C09F7650001F7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BDB0F61C09F8860001F7D6 /* HTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HTTP.xcodeproj; path = HTTP/HTTP.xcodeproj; sourceTree = "<group>"; };
+		B0D253621C0B6370002486D6 /* HTTPFailureResponderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPFailureResponderType.swift; sourceTree = "<group>"; };
+		B0D253631C0B6370002486D6 /* HTTPMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMiddleware.swift; sourceTree = "<group>"; };
+		B0D253641C0B6370002486D6 /* HTTPRequestMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddleware.swift; sourceTree = "<group>"; };
+		B0D253651C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddlewareResult.swift; sourceTree = "<group>"; };
+		B0D253661C0B6370002486D6 /* HTTPRequestMiddlewareType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestMiddlewareType.swift; sourceTree = "<group>"; };
+		B0D253671C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestResponseMiddlewareType.swift; sourceTree = "<group>"; };
+		B0D253681C0B6370002486D6 /* HTTPResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponder.swift; sourceTree = "<group>"; };
+		B0D253691C0B6370002486D6 /* HTTPResponseMiddlewareType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseMiddlewareType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,21 +128,16 @@
 		B0BDB0C91C09F7650001F7D6 /* HTTPMiddleware */ = {
 			isa = PBXGroup;
 			children = (
-				B0BDB0CA1C09F7650001F7D6 /* HTTPFailureResponderType.swift */,
-				B0BDB0CB1C09F7650001F7D6 /* HTTPFallibleRequestMiddlewareType.swift */,
-				B0BDB0CC1C09F7650001F7D6 /* HTTPFallibleResponseMiddlewareType.swift */,
 				B0BDB0CD1C09F7650001F7D6 /* HTTPMiddleware.h */,
-				B0BDB0CE1C09F7650001F7D6 /* HTTPMiddleware.swift */,
-				B0BDB0CF1C09F7650001F7D6 /* HTTPRequestMiddlewareResult.swift */,
-				B0BDB0D01C09F7650001F7D6 /* HTTPRequestMiddlewareType.swift */,
-				B0BDB0D11C09F7650001F7D6 /* HTTPRequestResponseMiddlewareType.swift */,
-				B0BDB0D21C09F7650001F7D6 /* HTTPResponderMiddlewareType.swift */,
-				B0BDB0D31C09F7650001F7D6 /* HTTPResponseMiddlewareType.swift */,
+				B0D253621C0B6370002486D6 /* HTTPFailureResponderType.swift */,
+				B0D253631C0B6370002486D6 /* HTTPMiddleware.swift */,
+				B0D253641C0B6370002486D6 /* HTTPRequestMiddleware.swift */,
+				B0D253651C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift */,
+				B0D253661C0B6370002486D6 /* HTTPRequestMiddlewareType.swift */,
+				B0D253671C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift */,
+				B0D253681C0B6370002486D6 /* HTTPResponder.swift */,
+				B0D253691C0B6370002486D6 /* HTTPResponseMiddlewareType.swift */,
 				B0BDB0D41C09F7650001F7D6 /* Info.plist */,
-				B0BDB0D51C09F7650001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift */,
-				B0BDB0D61C09F7650001F7D6 /* SimpleHTTPFallibleResponder.swift */,
-				B0BDB0D71C09F7650001F7D6 /* SimpleHTTPRequestMiddleware.swift */,
-				B0BDB0D81C09F7650001F7D6 /* SimpleHTTPResponderType.swift */,
 			);
 			path = HTTPMiddleware;
 			sourceTree = "<group>";
@@ -335,19 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0BDB0DE1C09F7760001F7D6 /* HTTPFallibleResponseMiddlewareType.swift in Sources */,
-				B0BDB0E81C09F7760001F7D6 /* SimpleHTTPResponderType.swift in Sources */,
-				B0BDB0E11C09F7760001F7D6 /* HTTPRequestMiddlewareType.swift in Sources */,
-				B0BDB0E41C09F7760001F7D6 /* HTTPResponseMiddlewareType.swift in Sources */,
-				B0BDB0E31C09F7760001F7D6 /* HTTPResponderMiddlewareType.swift in Sources */,
-				B0BDB0E51C09F7760001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */,
-				B0BDB0DF1C09F7760001F7D6 /* HTTPMiddleware.swift in Sources */,
-				B0BDB0E21C09F7760001F7D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */,
-				B0BDB0E71C09F7760001F7D6 /* SimpleHTTPRequestMiddleware.swift in Sources */,
-				B0BDB0E61C09F7760001F7D6 /* SimpleHTTPFallibleResponder.swift in Sources */,
-				B0BDB0DD1C09F7760001F7D6 /* HTTPFallibleRequestMiddlewareType.swift in Sources */,
-				B0BDB0E01C09F7760001F7D6 /* HTTPRequestMiddlewareResult.swift in Sources */,
-				B0BDB0DC1C09F7760001F7D6 /* HTTPFailureResponderType.swift in Sources */,
+				B0D253741C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */,
+				B0D2536E1C0B6370002486D6 /* HTTPRequestMiddleware.swift in Sources */,
+				B0D2536A1C0B6370002486D6 /* HTTPFailureResponderType.swift in Sources */,
+				B0D253761C0B6370002486D6 /* HTTPResponder.swift in Sources */,
+				B0D253781C0B6370002486D6 /* HTTPResponseMiddlewareType.swift in Sources */,
+				B0D253701C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift in Sources */,
+				B0D253721C0B6370002486D6 /* HTTPRequestMiddlewareType.swift in Sources */,
+				B0D2536C1C0B6370002486D6 /* HTTPMiddleware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,19 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0BDB0EB1C09F7770001F7D6 /* HTTPFallibleResponseMiddlewareType.swift in Sources */,
-				B0BDB0F51C09F7770001F7D6 /* SimpleHTTPResponderType.swift in Sources */,
-				B0BDB0EE1C09F7770001F7D6 /* HTTPRequestMiddlewareType.swift in Sources */,
-				B0BDB0F11C09F7770001F7D6 /* HTTPResponseMiddlewareType.swift in Sources */,
-				B0BDB0F01C09F7770001F7D6 /* HTTPResponderMiddlewareType.swift in Sources */,
-				B0BDB0F21C09F7770001F7D6 /* SimpleHTTPFallibleRequestMiddleware.swift in Sources */,
-				B0BDB0EC1C09F7770001F7D6 /* HTTPMiddleware.swift in Sources */,
-				B0BDB0EF1C09F7770001F7D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */,
-				B0BDB0F41C09F7770001F7D6 /* SimpleHTTPRequestMiddleware.swift in Sources */,
-				B0BDB0F31C09F7770001F7D6 /* SimpleHTTPFallibleResponder.swift in Sources */,
-				B0BDB0EA1C09F7770001F7D6 /* HTTPFallibleRequestMiddlewareType.swift in Sources */,
-				B0BDB0ED1C09F7770001F7D6 /* HTTPRequestMiddlewareResult.swift in Sources */,
-				B0BDB0E91C09F7770001F7D6 /* HTTPFailureResponderType.swift in Sources */,
+				B0D253751C0B6370002486D6 /* HTTPRequestResponseMiddlewareType.swift in Sources */,
+				B0D2536F1C0B6370002486D6 /* HTTPRequestMiddleware.swift in Sources */,
+				B0D2536B1C0B6370002486D6 /* HTTPFailureResponderType.swift in Sources */,
+				B0D253771C0B6370002486D6 /* HTTPResponder.swift in Sources */,
+				B0D253791C0B6370002486D6 /* HTTPResponseMiddlewareType.swift in Sources */,
+				B0D253711C0B6370002486D6 /* HTTPRequestMiddlewareResult.swift in Sources */,
+				B0D253731C0B6370002486D6 /* HTTPRequestMiddlewareType.swift in Sources */,
+				B0D2536D1C0B6370002486D6 /* HTTPMiddleware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

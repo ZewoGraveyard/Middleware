@@ -1,4 +1,4 @@
-// SimpleHTTPRequestMiddlewareType.swift
+// HTTPRequestMiddlewareType.swift
 //
 // The MIT License (MIT)
 //
@@ -24,9 +24,9 @@
 
 import HTTP
 
-public struct SimpleHTTPRequestMiddleware : HTTPRequestMiddlewareType {
-    let respond: (request: HTTPRequest) -> HTTPRequestMiddlewareResult
-    public func respond(request: HTTPRequest) -> HTTPRequestMiddlewareResult{
-        return respond(request: request)
+public struct HTTPRequestMiddleware: HTTPRequestMiddlewareType {
+    let respond: (request: HTTPRequest) throws -> HTTPRequestMiddlewareResult
+    public func respond(request: HTTPRequest) throws -> HTTPRequestMiddlewareResult{
+        return try respond(request: request)
     }
 }

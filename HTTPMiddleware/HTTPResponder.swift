@@ -1,4 +1,4 @@
-// HTTPRequestResponseMiddlewareType.swift
+// HTTPResponder.swift
 //
 // The MIT License (MIT)
 //
@@ -24,22 +24,16 @@
 
 import HTTP
 
-public protocol HTTPResponderMiddlewareType {
-    func respond(respond: HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)
+public struct HTTPResponder: HTTPResponderType {
+    let respond: (request: HTTPRequest) throws -> HTTPResponse
+    public func respond(request: HTTPRequest) throws -> HTTPResponse {
+        return try respond(request: request)
+    }
 }
 
-func >>>(responder: HTTPResponderType, middleware: HTTPResponderMiddlewareType) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middleware.respond(responder.respond))
-}
-
-func >>>(respond: HTTPRequest -> HTTPResponse, middleware: HTTPResponderMiddlewareType) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middleware.respond(respond))
-}
-
-func >>>(responder: HTTPResponderType, middlewareRespond: (HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middlewareRespond(responder.respond))
-}
-
-func >>>(respond: HTTPRequest -> HTTPResponse, middlewareRespond: (HTTPRequest -> HTTPResponse) -> (HTTPRequest -> HTTPResponse)) -> HTTPResponderType {
-    return SimpleHTTPResponder(respond: middlewareRespond(respond))
+public struct HTTPIdentifiableResponder: HTTPIdentifiableResponderType {
+    let respond: (request: HTTPRequest, id: String) throws -> HTTPResponse
+    public func respond(request: HTTPRequest, id: String) throws -> HTTPResponse {
+        return try respond(request: request, id: id)
+    }
 }
