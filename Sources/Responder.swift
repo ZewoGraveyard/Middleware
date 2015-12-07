@@ -1,4 +1,4 @@
-// HTTPResponder.swift
+// Responder.swift
 //
 // The MIT License (MIT)
 //
@@ -24,16 +24,9 @@
 
 import HTTP
 
-public struct HTTPResponder: HTTPResponderType {
-    let respond: (request: HTTPRequest) throws -> HTTPResponse
-    public func respond(request: HTTPRequest) throws -> HTTPResponse {
+public struct Responder: ResponderType {
+    let respond: (request: Request) throws -> Response
+    public func respond(request: Request) throws -> Response {
         return try respond(request: request)
-    }
-}
-
-public struct HTTPIdentifiableResponder: HTTPIdentifiableResponderType {
-    let respond: (request: HTTPRequest, id: String) throws -> HTTPResponse
-    public func respond(request: HTTPRequest, id: String) throws -> HTTPResponse {
-        return try respond(request: request, id: id)
     }
 }

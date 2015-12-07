@@ -1,4 +1,4 @@
-// HTTPResponseMiddlewareType.swift
+// RequestMiddlewareResult.swift
 //
 // The MIT License (MIT)
 //
@@ -24,30 +24,7 @@
 
 import HTTP
 
-public protocol HTTPResponseMiddlewareType {
-    func respond(response: HTTPResponse) throws -> HTTPResponse
-}
-
-public func >>>(responder: HTTPResponderType, middleware: HTTPResponseMiddlewareType) -> HTTPResponderType {
-    return HTTPResponder { request in
-        return try middleware.respond(responder.respond(request))
-    }
-}
-
-public func >>>(respond: HTTPRequest throws -> HTTPResponse, middleware: HTTPResponseMiddlewareType) -> HTTPResponderType {
-    return HTTPResponder { request in
-        return try middleware.respond(respond(request))
-    }
-}
-
-public func >>>(responder: HTTPResponderType, middlewareRespond: HTTPResponse throws -> HTTPResponse) -> HTTPResponderType {
-    return HTTPResponder { request in
-        return try middlewareRespond(responder.respond(request))
-    }
-}
-
-public func >>>(respond: HTTPRequest throws -> HTTPResponse, middlewareRespond: HTTPResponse throws -> HTTPResponse) -> HTTPResponderType {
-    return HTTPResponder { request in
-        return try middlewareRespond(respond(request))
-    }
+public enum RequestMiddlewareResult {
+    case Next(Request)
+    case Respond(Response)
 }

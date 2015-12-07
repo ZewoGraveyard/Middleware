@@ -1,4 +1,4 @@
-// HTTPRequestResponseMiddlewareType.swift
+// RequestResponseMiddlewareType.swift
 //
 // The MIT License (MIT)
 //
@@ -24,52 +24,52 @@
 
 import HTTP
 
-public protocol HTTPRequestResponseMiddlewareType {
-    func respond(request: HTTPRequest, response: HTTPResponse)
+public protocol RequestResponseMiddlewareType {
+    func respond(request: Request, response: Response)
 }
 
-public func >>>(respond: HTTPRequest -> HTTPResponse, middleware: HTTPRequestResponseMiddlewareType) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(respond: Request -> Response, middleware: RequestResponseMiddlewareType) -> ResponderType {
+    return Responder { request in
         let response = respond(request)
         middleware.respond(request, response: response)
         return response
     }
 }
 
-public func >>>(respond: HTTPRequest -> HTTPResponse, middlewareRespond: (HTTPRequest, response: HTTPResponse) -> Void) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(respond: Request -> Response, middlewareRespond: (Request, response: Response) -> Void) -> ResponderType {
+    return Responder { request in
         let response = respond(request)
         middlewareRespond(request, response: response)
         return response
     }
 }
 
-public func >>>(responder: HTTPResponderType, middleware: HTTPRequestResponseMiddlewareType) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(responder: ResponderType, middleware: RequestResponseMiddlewareType) -> ResponderType {
+    return Responder { request in
         let response = try responder.respond(request)
         middleware.respond(request, response: response)
         return response
     }
 }
 
-public func >>>(respond: HTTPRequest throws -> HTTPResponse, middleware: HTTPRequestResponseMiddlewareType) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(respond: Request throws -> Response, middleware: RequestResponseMiddlewareType) -> ResponderType {
+    return Responder { request in
         let response = try respond(request)
         middleware.respond(request, response: response)
         return response
     }
 }
 
-public func >>>(responder: HTTPResponderType, middlewareRespond: (HTTPRequest, response: HTTPResponse) -> Void) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(responder: ResponderType, middlewareRespond: (Request, response: Response) -> Void) -> ResponderType {
+    return Responder { request in
         let response = try responder.respond(request)
         middlewareRespond(request, response: response)
         return response
     }
 }
 
-public func >>>(respond: HTTPRequest throws -> HTTPResponse, middlewareRespond: (HTTPRequest, response: HTTPResponse) -> Void) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(respond: Request throws -> Response, middlewareRespond: (Request, response: Response) -> Void) -> ResponderType {
+    return Responder { request in
         let response = try respond(request)
         middlewareRespond(request, response: response)
         return response

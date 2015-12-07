@@ -1,4 +1,4 @@
-// HTTPRequestMiddlewareResult.swift
+// Middleware.swift
 //
 // The MIT License (MIT)
 //
@@ -22,9 +22,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import HTTP
+infix operator >>> { associativity left }
 
-public enum HTTPRequestMiddlewareResult {
-    case Next(HTTPRequest)
-    case Respond(HTTPResponse)
-}
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-// HTTPMiddleware.swift
+// ResponseMiddlewareType.swift
 //
 // The MIT License (MIT)
 //
@@ -22,12 +22,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-infix operator >>> { associativity left }
+import HTTP
 
+public protocol ResponseMiddlewareType {
+    func respond(response: Response) throws -> Response
+}
 
+public func >>>(responder: ResponderType, middleware: ResponseMiddlewareType) -> ResponderType {
+    return Responder { request in
+        return try middleware.respond(responder.respond(request))
+    }
+}
 
+public func >>>(respond: Request throws -> Response, middleware: ResponseMiddlewareType) -> ResponderType {
+    return Responder { request in
+        return try middleware.respond(respond(request))
+    }
+}
 
+public func >>>(responder: ResponderType, middlewareRespond: Response throws -> Response) -> ResponderType {
+    return Responder { request in
+        return try middlewareRespond(responder.respond(request))
+    }
+}
 
-
-
-
+public func >>>(respond: Request throws -> Response, middlewareRespond: Response throws -> Response) -> ResponderType {
+    return Responder { request in
+        return try middlewareRespond(respond(request))
+    }
+}

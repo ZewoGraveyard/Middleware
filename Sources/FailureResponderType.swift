@@ -1,4 +1,4 @@
-// HTTPFailureResponderType.swift
+// FailureResponderType.swift
 //
 // The MIT License (MIT)
 //
@@ -24,12 +24,12 @@
 
 import HTTP
 
-public protocol HTTPFailureResponderType {
-    func respond(error: ErrorType) -> HTTPResponse
+public protocol FailureResponderType {
+    func respond(error: ErrorType) -> Response
 }
 
-public func >>>(responder: HTTPResponderType, failureResponder: HTTPFailureResponderType) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(responder: ResponderType, failureResponder: FailureResponderType) -> ResponderType {
+    return Responder { request in
         do {
             return try responder.respond(request)
         } catch {
@@ -38,8 +38,8 @@ public func >>>(responder: HTTPResponderType, failureResponder: HTTPFailureRespo
     }
 }
 
-public func >>>(respond: HTTPRequest throws -> HTTPResponse, failureResponder: HTTPFailureResponderType) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(respond: Request throws -> Response, failureResponder: FailureResponderType) -> ResponderType {
+    return Responder { request in
         do {
             return try respond(request)
         } catch {
@@ -48,8 +48,8 @@ public func >>>(respond: HTTPRequest throws -> HTTPResponse, failureResponder: H
     }
 }
 
-public func >>>(responder: HTTPResponderType, respondFailure: ErrorType -> HTTPResponse) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(responder: ResponderType, respondFailure: ErrorType -> Response) -> ResponderType {
+    return Responder { request in
         do {
             return try responder.respond(request)
         } catch {
@@ -58,8 +58,8 @@ public func >>>(responder: HTTPResponderType, respondFailure: ErrorType -> HTTPR
     }
 }
 
-public func >>>(respond: HTTPRequest throws -> HTTPResponse, respondFailure: ErrorType -> HTTPResponse) -> HTTPResponderType {
-    return HTTPResponder { request in
+public func >>>(respond: Request throws -> Response, respondFailure: ErrorType -> Response) -> ResponderType {
+    return Responder { request in
         do {
             return try respond(request)
         } catch {
