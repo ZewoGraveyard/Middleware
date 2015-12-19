@@ -36,3 +36,16 @@ public func >>>(middleware: RequestMiddlewareType, router: Router) -> Router {
         fallback: (middleware >>> router.fallback).respond
     )
 }
+
+public func >>>(router: Router, middleware: RequestResponseMiddlewareType) -> Router {
+    return Router(
+        routes: router.routes.map { route in
+            Router.Route(
+                path: route.path,
+                methods: route.methods,
+                routeRespond: (route.routeRespond >>> middleware).respond
+            )
+        },
+        fallback: (router.fallback >>> middleware).respond
+    )
+}
