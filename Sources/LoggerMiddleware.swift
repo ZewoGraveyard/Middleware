@@ -33,8 +33,8 @@ public struct LoggerMiddleware: RequestResponseMiddlewareType {
     public init() {}
 
     public func respond(request: Request, response: Response) {
-        let req = "\(request)\n-\n"
-        let res = "\(response)\n"
+        let req = "\(request)\n-----\n"
+        let res = "\(response)\n=====\n"
 
         write(STDOUT_FILENO, req, req.utf8.count)
         write(STDOUT_FILENO, res, res.utf8.count)
